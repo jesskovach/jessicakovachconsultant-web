@@ -1,0 +1,39 @@
+.section {
+  width: 100%;
+}
+
+.size_default {
+  padding-block: var(--space-8);
+}
+
+.size_sm {
+  padding-block: var(--space-6);
+}
+
+.size_lg {
+  padding-block: var(--space-9);
+}
+
+.tone_default {
+  background-color: var(--color-bg);
+}
+
+.tone_alt {
+  background-color: var(--color-bg-alt);
+}
+
+.tone_muted {
+  background-color: var(--color-bg-muted);
+}
+
+.tone_accent {
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.tone_accent :global(h1),
+.tone_accent :global(h2),
+.tone_accent :global(h3),
+.tone_accent :global(p) {
+  color: var(--color-on-accent);
+}

@@ -1,0 +1,459 @@
+/* ────────────────────────────────────────────────────────────────────────────
+   Shared eyebrow used across home sections — Design.md label-caps
+   ──────────────────────────────────────────────────────────────────────── */
+
+.sectionEyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Hero — "Making sense of what matters" + quote card
+   ──────────────────────────────────────────────────────────────────────── */
+
+.heroSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(80px, 11vw, 140px);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.heroEyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+}
+
+.heroTitle {
+  font-family: var(--ds-font-serif);
+  font-size: clamp(2.75rem, 5.4vw, 4.25rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ds-primary);
+  margin: 0;
+}
+
+.heroLead {
+  font-family: var(--ds-font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ds-on-surface-variant);
+  max-width: 48ch;
+  margin: 0;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.heroBtnPrimary {
+  background-color: var(--ds-primary);
+  border-color: var(--ds-primary);
+  color: var(--ds-on-primary);
+  font-family: var(--ds-font-sans);
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+
+.heroBtnPrimary:hover {
+  background-color: #2a1f3f;
+  border-color: #2a1f3f;
+  color: var(--ds-on-primary);
+}
+
+.heroBtnSecondary {
+  background-color: transparent;
+  border-color: var(--ds-outline-variant);
+  color: var(--ds-on-surface);
+  font-family: var(--ds-font-sans);
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+
+.heroBtnSecondary:hover {
+  border-color: var(--ds-primary);
+  color: var(--ds-primary);
+}
+
+/* Quote card */
+.heroQuote {
+  background-color: var(--ds-surface-container);
+  border-radius: 4px;
+  padding: clamp(32px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-height: 280px;
+}
+
+.quoteText {
+  font-family: var(--ds-font-serif);
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ds-primary);
+  margin: var(--space-3) 0 auto;
+}
+
+.quoteDivider {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: var(--ds-outline-variant);
+  margin: var(--space-4) 0 var(--space-3);
+}
+
+.quoteAttribution {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-on-surface-variant);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Principles strip ("20+ Years / Systems Thinking / Human-Centered")
+   ──────────────────────────────────────────────────────────────────────── */
+
+.principles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .principles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.principle {
+  padding-block: var(--space-3);
+}
+
+.principleLabel {
+  font-family: var(--ds-font-serif);
+  font-size: 1.5rem;
+  color: var(--ds-primary);
+  letter-spacing: 0.02em;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   The Approach — editorial layout (portrait left / content right)
+   ──────────────────────────────────────────────────────────────────────── */
+
+.approachSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(72px, 10vw, 120px);
+}
+
+.approach {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .approach {
+    grid-template-columns: 1fr 1.15fr;
+    gap: var(--space-8);
+  }
+}
+
+.approachVisual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--ds-surface-container);
+}
+
+.approachImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.approachVisual:hover .approachImage {
+  transform: scale(1.02);
+}
+
+.approachCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.approachTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ds-primary);
+  margin: var(--space-2) 0 0;
+  max-width: 22ch;
+}
+
+.approachBody {
+  font-family: var(--ds-font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+  max-width: 56ch;
+}
+
+.approachDivider {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: var(--ds-outline-variant);
+  margin: var(--space-4) 0 var(--space-3);
+}
+
+.principlesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principleItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ds-on-surface-variant);
+}
+
+.principleIcon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--ds-tertiary);
+  margin-top: 2px;
+}
+
+.approachLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-primary);
+  border-bottom: 1px solid var(--ds-on-surface);
+  padding-bottom: 6px;
+  align-self: flex-start;
+  transition: gap var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.approachLink:hover {
+  color: var(--ds-primary-mauve);
+  border-color: var(--ds-primary-mauve);
+  gap: 14px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   "Our Capabilities" — Focused Interventions for Complex Growth
+   ──────────────────────────────────────────────────────────────────────── */
+
+.capabilities {
+  background-color: var(--ds-surface-container-high);
+  padding-block: clamp(72px, 10vw, 120px);
+}
+
+.capabilitiesHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
+  max-width: 760px;
+}
+
+.capabilitiesEyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+}
+
+.capabilitiesTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ds-primary);
+  margin: 0;
+  max-width: 22ch;
+}
+
+.capabilitiesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .capabilitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .capabilitiesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.capabilityCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 40px;
+  background-color: var(--ds-surface-container-lowest);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 4px;
+  transition: border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.capabilityCard:hover {
+  border-color: var(--ds-outline);
+  transform: translateY(-2px);
+}
+
+.capabilityIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--ds-surface-container-highest);
+  border-radius: 4px;
+  color: var(--ds-on-surface-variant);
+  margin-bottom: var(--space-3);
+}
+
+.capabilityTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--ds-primary);
+  margin: 0;
+}
+
+.capabilityBody {
+  font-family: var(--ds-font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+  flex: 1;
+}
+
+.capabilityDivider {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: var(--ds-outline-variant);
+  margin: var(--space-4) 0 var(--space-3);
+}
+
+.capabilityLink {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.capabilityLink:hover {
+  color: var(--ds-primary-mauve);
+  gap: 12px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Bottom CTA — "Ready to do the work?"
+   ──────────────────────────────────────────────────────────────────────── */
+
+.ctaSection {
+  background-color: #2d2540;
+}
+
+.ctaBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: var(--ds-font-serif);
+  font-size: clamp(2rem, 3.6vw, 2.75rem);
+  color: var(--color-on-accent);
+}
+
+.ctaCopy {
+  font-family: var(--ds-font-sans);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 52ch;
+}

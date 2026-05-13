@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(mv assets *)",
+      "Bash(npm create *)",
+      "Bash(npm run *)",
+      "Bash(ls -lat \"C:/Users/julqi/AppData/Local/Temp/claude/\" 2>/dev/null | head -20)",
+      "Read(//c/Users/julqi/AppData/Local/Temp/claude/**)"
+    ]
+  }
+}
