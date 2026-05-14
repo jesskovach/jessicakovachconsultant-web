@@ -227,7 +227,7 @@ const substackPosts = [
   {
     kind: 'Essay',
     date: 'Recent',
-    title: 'The Collapse Was Tokenized',
+    title: 'The Collapse Was Televised',
     body:
       'On how institutional decline gets repackaged as cultural symbolism — and what gets lost when symptoms become brand identity.',
     href: '#',
@@ -844,7 +844,7 @@ export default function WritingPortfolio() {
     filterItems(writingThemes, normalizedQuery).length +
     (normalizedQuery
       ? speakingTopics.filter((t) => t.toLowerCase().includes(normalizedQuery))
-          .length
+        .length
       : speakingTopics.length);
 
   const counts = {
