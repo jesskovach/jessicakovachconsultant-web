@@ -22,14 +22,14 @@ const submissionWaves = [
     cards: [
       {
         kind: 'Master Overview',
-        title: 'Systemic and Lawful Erosion of Rights',
+        title: 'Systemic and Lawful Erosion of Democratic Accountability and Human Rights in the United States',
         articles: 'UDHR Articles 1, 2, 7, 10, 21, 28',
         body:
-          'Establishes the analytical and evidentiary framework for a series of communications to UN Special Rapporteurs. Documents systemic, lawful, and normalized processes through which democratic accountability and human rights protections have been weakened in the United States. Uses the UDHR as the evaluative baseline, treating harm as structural rather than content-based. UDHR Articles 19, 21, 12, 26, 28.',
+          'Establishes the analytical and evidentiary framework for a series of communications to UN Special Rapporteurs. Documents systemic, lawful, and normalized processes through which democratic accountability and human rights protections have been weakened in the United States. Uses the UDHR as an evaluative baseline, treating its provisions as interdependent guardrails protecting dignity, equality, freedom of expression, and democratic participation.',
       },
       {
         kind: 'Addendum I',
-        title: 'Comparative Analysis of State Compliance',
+        title: 'Epistemic Capture, the Right to Education, and Cross-Complaint Updates',
         articles: 'UDHR Articles 8, 28, 30',
         body:
           'Introduces epistemic capture — the structural corruption of information environments — as a cross-cutting mechanism operating across complaints on democratic exception, information integrity, oligarchic capture, religious nationalism, and suppression of dissent. Identifies the 1987 repeal of the Fairness Doctrine as a critical inflection point, and establishes that dismantling truth obligations in media, failing to regulate algorithmic information systems, and permitting ideological or economic interests to dominate narrative production violates the right to education under UDHR Article 26.',
@@ -50,10 +50,10 @@ const submissionWaves = [
     cards: [
       {
         kind: 'Complaint #2',
-        title: 'Arbitrary Interference with Privacy & Communication',
+        title: 'Media Deregulation, Algorithmic Amplification, and the Systematic Erosion of Information Integrity',
         articles: 'UDHR Article 12',
         body:
-          'Alleges the United States has, through deliberate deregulation of broadcast media and sustained failure to regulate dominant digital platforms, dismantled public-interest safeguards essential to information integrity and democratic participation. Traces the removal of truth obligations from broadcast media and the rise of unregulated algorithmically mediated content. UDHR Articles 19, 21, 12, 26, 28.',
+          'Alleges the United States has, through deliberate deregulation of broadcast media and sustained failure to regulate dominant digital platforms, dismantled public-interest safeguards essential to information integrity and democratic participation. Traces the removal of truth obligations from broadcast media and the rise of engagement-driven algorithmic systems that legally protect and economically incentivize falsehood, ideological distortion, and dehumanization. Characterizes the harm as structural rather than content-based. UDHR Articles 19, 21, 12, 26, 28.',
       },
       {
         kind: 'Complaint #7',
@@ -61,7 +61,7 @@ const submissionWaves = [
           'Epistemic Capture: The Systematic Undermining of the Right to Education',
         articles: 'UDHR Article 19',
         body:
-          "Alleges the United States has systematically undermined the public's right to education, informed participation, and democratic self-determination by dismantling truth obligations in the media, failing to regulate algorithmically mediated information systems, and tolerating narrative manipulation driven by political and economic interests. Argues the resulting epistemic collapse constitutes a violation of the right to education — not through denial of schooling, but through corruption of the conditions under which learning, understanding, and democratic judgment occur, with particular harm to children and young people. UDHR Articles 26, 19, 21, 12, 28, 1–2.",
+          "Alleges the United States has systematically undermined the public’s right to education, informed participation, and democratic self-determination by dismantling truth obligations in the media, failing to regulate algorithmically mediated information systems, and tolerating narrative manipulation driven by political and economic interests. Argues the resulting epistemic collapse constitutes a violation of the right to education — not through denial of schooling, but through corruption of the conditions under which learning, understanding, and democratic judgment occur, with particular harm to children and young people. UDHR Articles 26, 19, 21, 12, 28, 1–2.",
       },
     ],
   },
@@ -75,7 +75,7 @@ const submissionWaves = [
           'Judicial Insulation of Power, Procedural Failure, and the Collapse of the Right to an Effective Remedy',
         articles: 'UDHR Article 20',
         body:
-          'Alleges the United States has, through judicial doctrine, procedural design, and institutional practice, systematically insulated state and private power from accountability, resulting in the effective collapse of the right to an effective remedy. Combined with procedural delays, jurisdictional dismissals, and asymmetric enforcement — cumulatively preventing adjudication on the merits in cases involving state violence, corporate misconduct, or systemic discrimination. Argues remedy now exists in form but not in function. UDHR Articles 7, 8, 21, 28.',
+          'Alleges the United States has, through judicial doctrine, procedural design, and institutional practice, systematically insulated state and private power from accountability, resulting in the effective collapse of the right to an effective remedy. Identifies doctrines of qualified and absolute immunity, restrictive standing, heightened pleading standards, arbitration mandates, and narrow interpretations of enforceable rights — combined with procedural delays, jurisdictional dismissals, and asymmetric enforcement — as cumulatively preventing adjudication on the merits in cases involving state violence, corporate misconduct, or systemic discrimination. Argues remedy now exists in form but not in function. UDHR Articles 7, 8, 21, 28.',
       },
       {
         kind: 'Complaint #3',
@@ -83,7 +83,7 @@ const submissionWaves = [
           'Oligarchic Capture of Democratic Governance and Economic Rights Erosion',
         articles: 'UDHR Articles 1, 7, 22, 25, 36, 28',
         body:
-          'Alleges that since the 1970s, the United States has progressively aligned governance structures with the interests of concentrated private wealth, producing systemic erosion of economic and social rights, democratic accountability, and equal protection under the law. Argues this oligarchic capture has been sustained through epistemic manipulation — distortion of public understanding regarding inequality, austerity, deregulation, and corruption — which enables economic coercion while suppressing informed resistance. Frames the combined effect of economic policy, misinformation, and regulatory design as producing structural deprivation and intergenerational harm.',
+          'Alleges that since the 1970s, the United States has progressively aligned governance structures with the interests of concentrated private wealth, producing systemic erosion of economic and social rights, democratic accountability, and equal protection under the law. Argues this oligarchic capture has been sustained through epistemic manipulation — distortion of public understanding regarding inequality, austerity, deregulation, and corruption — which enables economic coercion while suppressing informed resistance. Frames the combined effect of economic policy, misinformation, and regulatory design as producing structural deprivation and intergenerational harm. UDHR Articles 1, 7, 22, 25, 26, 28.',
       },
       {
         kind: 'Complaint #5',
@@ -91,7 +91,7 @@ const submissionWaves = [
           'State-Enabled Religious Nationalism, Epistemic Capture, and Targeted Dehumanization',
         articles: 'UDHR Articles 22, 23, 25',
         body:
-          "Alleges the United States has increasingly enabled the fusion of state power with a dominant religious-nationalist ideology, producing systemic discrimination, dehumanization, and heightened risk of violence against LGBTQIA+ people, immigrants, women, and religious minorities. Documents the pathway by which religious belief is reframed as entitlement, encoded into law and policy, amplified through deregulated media and algorithms, and reinforced through educational degradation — with the state's failure to counter or regulate these dynamics allowing systemic harm.",
+          "Alleges the United States has increasingly enabled the fusion of state power with a dominant religious-nationalist ideology, producing systemic discrimination, dehumanization, and heightened risk of violence against LGBTQIA+ people, immigrants, women, and religious minorities. Documents the pathway by which religious belief is reframed as entitlement, encoded into law and policy, amplified through deregulated media and algorithms, and reinforced through educational degradation — with the state’s failure to counter or regulate these dynamics allowing religious nationalism to function as a governing ideology rather than a protected belief. UDHR Articles 1, 2, 3, 5, 7, 18, 26.",
       },
       {
         kind: 'Complaint #6',
@@ -223,11 +223,27 @@ const academicPapers = [
   },
 ];
 
+const leadershipReflections = [
+  {
+    kind: 'BUS 210 · Principles of Leadership & Management',
+    subkind: 'Personal leadership philosophy',
+    title: 'Statement of Leadership',
+    body:
+      'Reflection on personal evolution as a leader — moving from viewing leadership as authority to understanding it as modeling behavior and building trust. Identifies emotional intelligence as central to effectiveness; outlines a democratic leadership style grounded in leading from the front, creating psychological safety through feedback-seeking, and delegating as a development opportunity.',
+  },
+  {
+    kind: 'OL 328 · Exemplary Leadership',
+    subkind: 'Applied reflection · Kouzes & Posner framework',
+    title: 'Reflection on the Five Practices of Exemplary Leadership',
+    body: `Reflective analysis applying Kouzes and Posner's Five Practices to real-world leadership experience. Demonstrates "Model the Way" through transparency and accountability during setbacks, "Inspire a Shared Vision" by reframing organizational change as development opportunity, "Challenge the Process" by proposing agile approaches to rigid timelines, and "Enable Others to Act" through empowerment and trust.`,
+  },
+];
+
 const substackPosts = [
   {
     kind: 'Essay',
     date: 'Recent',
-    title: 'Jul-qifhel Cana',
+    title: 'The Collapse Was Televised ',
     body:
       'On how institutional decline gets repackaged as cultural symbolism — and what gets lost when symptoms become brand identity.',
     href: '#',
@@ -235,7 +251,7 @@ const substackPosts = [
   {
     kind: 'Essay',
     date: 'Recent',
-    title: 'Re-wilding Belonging',
+    title: 'Rewriting Belonging',
     body:
       "Belonging isn't a culture initiative. It's a structural condition we have to design for — and most organizations have unlearned how.",
     href: '#',
@@ -307,6 +323,7 @@ function getAllItems() {
       w.cards.map((c) => ({ ...c, _tab: 'applied' })),
     ),
     ...certifications.map((c) => ({ ...c, _tab: 'applied' })),
+    ...leadershipReflections.map((r) => ({ ...r, _tab: 'applied' })),
     ...keynotes.map((k) => ({ ...k, _tab: 'keynotes' })),
     ...academicPapers.map((p) => ({ ...p, _tab: 'academic' })),
     ...substackPosts.map((p) => ({ ...p, _tab: 'substack' })),
@@ -343,7 +360,8 @@ function countAppliedMatches(q) {
     0,
   );
   const certCount = filterItems(certifications, q).length;
-  return bookCount + waveCardCount + certCount;
+  const reflectionCount = filterItems(leadershipReflections, q).length;
+  return bookCount + waveCardCount + certCount + reflectionCount;
 }
 
 function SearchIcon() {
@@ -514,11 +532,24 @@ function AppliedPanel({ query }) {
     .map((w) => ({ ...w, cards: filterItems(w.cards, query) }))
     .filter((w) => w.cards.length > 0);
   const filteredCerts = filterItems(certifications, query);
+  const filteredReflections = filterItems(leadershipReflections, query);
 
   const totalMatches =
     (showBook ? 1 : 0) +
     filteredWaves.reduce((sum, w) => sum + w.cards.length, 0) +
-    filteredCerts.length;
+    filteredCerts.length +
+    filteredReflections.length;
+
+  const [expandedRows, setExpandedRows] = useState(() => new Set());
+
+  const toggleRow = (id) => {
+    setExpandedRows((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
 
   if (query && totalMatches === 0) {
     return <EmptyState query={query} scope="Applied Work" />;
@@ -565,36 +596,84 @@ function AppliedPanel({ query }) {
             </p>
           </FadeIn>
 
-          <div className={styles.wavesGrid}>
+          <div className={styles.advocacyWaves}>
             {filteredWaves.map((wave) => (
-              <div key={wave.id} className={styles.waveColumn}>
-                <header className={styles.waveHeader}>
-                  <span className={styles.waveLabel}>{wave.label}</span>
-                  <hr className={styles.waveDivider} />
+              <section key={wave.id} className={styles.advocacyWaveBlock}>
+                <header className={styles.advocacyWaveHeader}>
+                  <span className={styles.advocacyWaveLabel}>{wave.label}</span>
+                  <span className={styles.advocacyWaveCount}>
+                    {wave.cards.length}{' '}
+                    {wave.cards.length === 1 ? 'submission' : 'submissions'}
+                  </span>
                 </header>
-                <Stagger className={styles.waveCards}>
-                  {wave.cards.map((card) => (
-                    <StaggerItem
-                      key={card.title}
-                      as="article"
-                      className={styles.complaintCard}
-                    >
-                      <span className={styles.complaintKind}>{card.kind}</span>
-                      <h3 className={styles.complaintTitle}>{card.title}</h3>
-                      {(card.recipient || card.cc) && (
-                        <div className={styles.complaintRecipient}>
-                          {card.recipient && <span>{card.recipient}</span>}
-                          {card.cc && <span>cc: {card.cc}</span>}
-                        </div>
-                      )}
-                      <span className={styles.complaintArticles}>
-                        {card.articles}
-                      </span>
-                      <p className={styles.complaintBody}>{card.body}</p>
-                    </StaggerItem>
-                  ))}
-                </Stagger>
-              </div>
+
+                <div className={styles.advocacyRows}>
+                  {wave.cards.map((card) => {
+                    const id = `${wave.id}-${card.title}`;
+                    const isExpanded = !!query || expandedRows.has(id);
+                    return (
+                      <article key={card.title} className={styles.advocacyRow}>
+                        <button
+                          type="button"
+                          className={styles.advocacyRowToggle}
+                          aria-expanded={isExpanded}
+                          onClick={() => toggleRow(id)}
+                        >
+                          <div className={styles.advocacyRowHead}>
+                            <span className={styles.advocacyRowKind}>
+                              {card.kind}
+                            </span>
+                            <h3 className={styles.advocacyRowTitle}>
+                              {card.title}
+                            </h3>
+                            <span className={styles.advocacyRowArticles}>
+                              {card.articles}
+                            </span>
+                          </div>
+                          <span
+                            className={styles.advocacyRowChevron}
+                            aria-hidden="true"
+                          >
+                            {isExpanded ? '−' : '+'}
+                          </span>
+                        </button>
+
+                        <AnimatePresence initial={false}>
+                          {isExpanded && (
+                            <motion.div
+                              key="body"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: 'auto' }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{
+                                duration: 0.25,
+                                ease: [0.22, 1, 0.36, 1],
+                              }}
+                              style={{ overflow: 'hidden' }}
+                            >
+                              <div className={styles.advocacyRowBody}>
+                                {(card.recipient || card.cc) && (
+                                  <div
+                                    className={styles.advocacyRowRecipient}
+                                  >
+                                    {card.recipient && (
+                                      <span>{card.recipient}</span>
+                                    )}
+                                    {card.cc && <span>cc: {card.cc}</span>}
+                                  </div>
+                                )}
+                                <p className={styles.advocacyRowText}>
+                                  {card.body}
+                                </p>
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </article>
+                    );
+                  })}
+                </div>
+              </section>
             ))}
           </div>
 
@@ -628,6 +707,34 @@ function AppliedPanel({ query }) {
                 <h3 className={styles.certTitle}>{cert.title}</h3>
                 <p className={styles.certIssuer}>{cert.issuer}</p>
                 <p className={styles.certBody}>{cert.body}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </Section>
+      )}
+
+      {filteredReflections.length > 0 && (
+        <Section className={styles.reflectionSection}>
+          <FadeIn className={styles.reflectionHeader}>
+            <h2 className={styles.reflectionTitle}>
+              Leadership Reflection &amp; Philosophy
+            </h2>
+            <hr className={styles.reflectionRule} aria-hidden="true" />
+          </FadeIn>
+
+          <Stagger className={styles.reflectionGrid}>
+            {filteredReflections.map((r, i) => (
+              <StaggerItem
+                key={r.title}
+                as="article"
+                className={`${styles.reflectionCard} ${
+                  i % 2 === 1 ? styles.reflectionCardDark : ''
+                }`.trim()}
+              >
+                <h3 className={styles.reflectionCardTitle}>{r.title}</h3>
+                <p className={styles.reflectionCardBody}>{r.body}</p>
+                <span className={styles.reflectionCardMeta}>{r.kind}</span>
+                <span className={styles.reflectionCardMeta}>{r.subkind}</span>
               </StaggerItem>
             ))}
           </Stagger>

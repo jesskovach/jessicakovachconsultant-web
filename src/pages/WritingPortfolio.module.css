@@ -1271,6 +1271,168 @@
   margin: 0;
 }
 
+/* Accordion list — single-column collapsible submissions */
+
+.advocacyWaves {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 5vw, 64px);
+}
+
+.advocacyWaveBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.advocacyWaveHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
+  border-bottom: 2px solid var(--ds-primary);
+}
+
+.advocacyWaveLabel {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-primary);
+}
+
+.advocacyWaveCount {
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-outline);
+}
+
+.advocacyRows {
+  display: flex;
+  flex-direction: column;
+}
+
+.advocacyRow {
+  border-bottom: 1px solid var(--ds-outline-variant);
+}
+
+.advocacyRow:last-child {
+  border-bottom: 0;
+}
+
+.advocacyRowToggle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-4) 4px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.advocacyRowToggle:hover {
+  background-color: var(--ds-surface-container-low);
+}
+
+.advocacyRowHead {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.advocacyRowKind {
+  font-family: var(--ds-font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-primary-mauve);
+  align-self: flex-start;
+}
+
+.advocacyRowTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 500;
+  font-size: clamp(1.0625rem, 1.7vw, 1.3125rem);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  color: var(--ds-primary);
+  margin: 0;
+  max-width: 64ch;
+}
+
+.advocacyRowArticles {
+  font-family: var(--ds-font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+  background-color: rgba(177, 173, 125, 0.18);
+  padding: 5px 10px;
+  border-radius: 3px;
+  align-self: flex-start;
+}
+
+.advocacyRowChevron {
+  font-family: var(--ds-font-sans);
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--ds-outline);
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--duration-fast) var(--ease-out);
+  margin-top: 4px;
+}
+
+.advocacyRowToggle:hover .advocacyRowChevron,
+.advocacyRowToggle[aria-expanded='true'] .advocacyRowChevron {
+  color: var(--ds-primary);
+}
+
+.advocacyRowBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0 4px var(--space-5);
+  max-width: 72ch;
+}
+
+.advocacyRowRecipient {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--ds-font-sans);
+  font-style: italic;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ds-on-surface-variant);
+}
+
+.advocacyRowText {
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+}
+
 .advocacyCallout {
   margin-top: clamp(48px, 6vw, 80px);
   padding: clamp(36px, 5vw, 56px) clamp(24px, 4vw, 64px);
