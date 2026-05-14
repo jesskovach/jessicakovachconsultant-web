@@ -4,7 +4,7 @@ import RootLayout from '@layouts/RootLayout';
 import Home from '@pages/Home';
 import About from '@pages/About';
 import Services from '@pages/Services';
-import AppliedWork from '@pages/AppliedWork';
+import WritingPortfolio from '@pages/WritingPortfolio';
 import Writing from '@pages/Writing';
 import FoundingClients from '@pages/FoundingClients';
 import FAQ from '@pages/FAQ';
@@ -21,7 +21,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/applied-work" element={<AppliedWork />} />
+          <Route path="/writing-portfolio" element={<WritingPortfolio />} />
           <Route path="/writing" element={<Writing />} />
           <Route path="/founding-clients" element={<FoundingClients />} />
           <Route path="/faq" element={<FAQ />} />

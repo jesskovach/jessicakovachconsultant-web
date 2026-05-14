@@ -9,8 +9,7 @@ export const siteConfig = {
   nav: [
     { label: 'About', to: '/about' },
     { label: 'Services', to: '/services' },
-    { label: 'Applied Work', to: '/applied-work' },
-    { label: 'Writing', to: '/writing' },
+    { label: 'Portfolio', to: '/writing-portfolio' },
     { label: 'FAQ', to: '/faq' },
     { label: 'Contact', to: '/contact' },
   ],
