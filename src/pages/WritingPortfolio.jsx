@@ -227,7 +227,7 @@ const substackPosts = [
   {
     kind: 'Essay',
     date: 'Recent',
-    title: 'The Collapse Was Televised',
+    title: 'Jul-qifhel Cana',
     body:
       'On how institutional decline gets repackaged as cultural symbolism — and what gets lost when symptoms become brand identity.',
     href: '#',
