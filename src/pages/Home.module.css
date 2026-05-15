@@ -433,7 +433,7 @@
    ──────────────────────────────────────────────────────────────────────── */
 
 .ctaSection {
-  background-color: #2d2540;
+  background-color: var(--ds-primary);
 }
 
 .ctaBlock {
