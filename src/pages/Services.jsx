@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PageTransition from '@components/motion/PageTransition';
@@ -10,6 +10,9 @@ import Button from '@components/primitives/Button';
 import { IconSpeaking, IconCheckCircle } from '@components/primitives/CapabilityIcons';
 import jessPortrait from '@assets/jess-about-portrait.png';
 import styles from './Services.module.css';
+
+const CALENDLY_URL = 'https://calendly.com/kovachconsulting';
+const CALENDLY_SCRIPT_SRC = 'https://assets.calendly.com/assets/external/widget.js';
 
 const serviceDetails = [
   {
@@ -244,34 +247,22 @@ export default function Services() {
   );
 }
 
-const bookingWeekdays = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
-
-const bookingWeeks = [
-  [
-    { day: 28, faded: true },
-    { day: 29, faded: true },
-    { day: 30, faded: true },
-    { day: 1 },
-    { day: 2 },
-    { day: 3, today: true },
-    { day: 4 },
-  ],
-  [
-    { day: 5 },
-    { day: 6 },
-    { day: 7 },
-    { day: 8 },
-    { day: 9 },
-    { day: 10 },
-    { day: 11 },
-  ],
-];
-
-const bookingTimes = ['9:00 AM', '1:30 PM'];
-
 function NextStep() {
-  const [selected, setSelected] = useState({ row: 1, col: 0 });
-  const [selectedTime, setSelectedTime] = useState(null);
+  useEffect(() => {
+    const existing = document.querySelector(
+      `script[src="${CALENDLY_SCRIPT_SRC}"]`,
+    );
+    if (existing) {
+      if (window.Calendly?.initInlineWidgets) {
+        window.Calendly.initInlineWidgets();
+      }
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = CALENDLY_SCRIPT_SRC;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <Section className={styles.nextStepSection}>
@@ -299,64 +290,11 @@ function NextStep() {
         </FadeIn>
 
         <FadeIn delay={0.1} className={styles.bookingCard}>
-          <div className={styles.bookingHeader}>
-            <h3 className={styles.bookingTitle}>Select a Time</h3>
-            <div className={styles.bookingNav}>
-              <button type="button" aria-label="Previous week" className={styles.bookingNavBtn}>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M15 18l-6-6 6-6" />
-                </svg>
-              </button>
-              <button type="button" aria-label="Next week" className={styles.bookingNavBtn}>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M9 6l6 6-6 6" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <hr className={styles.bookingDivider} />
-
-          <div className={styles.bookingDays}>
-            {bookingWeekdays.map((day) => (
-              <span key={day} className={styles.bookingDay}>{day}</span>
-            ))}
-          </div>
-
-          {bookingWeeks.map((row, rowIdx) => (
-            <div key={rowIdx} className={styles.bookingDates}>
-              {row.map((cell, colIdx) => {
-                const isSelected =
-                  selected.row === rowIdx && selected.col === colIdx;
-                return (
-                  <button
-                    key={`${rowIdx}-${colIdx}`}
-                    type="button"
-                    onClick={() => setSelected({ row: rowIdx, col: colIdx })}
-                    className={`${styles.bookingDate} ${cell.faded ? styles.bookingDateFaded : ''} ${cell.today ? styles.bookingDateToday : ''} ${isSelected ? styles.bookingDateSelected : ''}`.trim()}
-                  >
-                    {cell.day}
-                  </button>
-                );
-              })}
-            </div>
-          ))}
-
-          <div className={styles.bookingTimes}>
-            {bookingTimes.map((time) => (
-              <button
-                key={time}
-                type="button"
-                onClick={() => setSelectedTime(time)}
-                className={`${styles.bookingTime} ${selectedTime === time ? styles.bookingTimeActive : ''}`.trim()}
-              >
-                {time}
-              </button>
-            ))}
-          </div>
-
-          <Button to="/contact" className={styles.bookingButton}>
-            Book conversation
-          </Button>
+          <div
+            className="calendly-inline-widget"
+            data-url={CALENDLY_URL}
+            style={{ width: '100%', height: '100%', minWidth: '320px' }}
+          />
         </FadeIn>
       </div>
     </Section>
