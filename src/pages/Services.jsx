@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import PageTransition from '@components/motion/PageTransition';
 import FadeIn from '@components/motion/FadeIn';
 import Stagger from '@components/motion/Stagger';
@@ -425,9 +426,12 @@ function DetailedScopes() {
                                     )}
                                   </span>
                                   {row.action && (
-                                    <a href="#" className={styles.scopePriceAction}>
+                                    <Link
+                                      to="/work-with-us"
+                                      className={styles.scopePriceAction}
+                                    >
                                       {row.action}
-                                    </a>
+                                    </Link>
                                   )}
                                 </span>
                               </li>

@@ -560,15 +560,9 @@
 }
 
 .postCard {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  padding: clamp(24px, 3vw, 32px);
   background-color: var(--ds-surface-container-lowest);
   border: 1px solid var(--ds-outline-variant);
   border-radius: 4px;
-  text-decoration: none;
-  color: inherit;
   transition: border-color var(--duration-base) var(--ease-out),
     transform var(--duration-base) var(--ease-out);
 }
@@ -576,6 +570,15 @@
 .postCard:hover {
   border-color: var(--ds-outline);
   transform: translateY(-2px);
+}
+
+.postCardLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: clamp(24px, 3vw, 32px);
+  text-decoration: none;
+  color: inherit;
 }
 
 .postMeta {

@@ -8,6 +8,8 @@ import StaggerItem from '@components/motion/StaggerItem';
 import Section from '@components/primitives/Section';
 import styles from './WritingPortfolio.module.css';
 
+const SUBSTACK_URL = '/contact';
+
 const researchBook = {
   badge: 'Drafting 2026',
   title: 'The Naming Work: A Diagnostic Practice for Rights-Based Leadership.',
@@ -246,7 +248,6 @@ const substackPosts = [
     title: 'The Collapse Was Televised ',
     body:
       'On how institutional decline gets repackaged as cultural symbolism — and what gets lost when symptoms become brand identity.',
-    href: '#',
   },
   {
     kind: 'Essay',
@@ -254,7 +255,6 @@ const substackPosts = [
     title: 'Rewriting Belonging',
     body:
       "Belonging isn't a culture initiative. It's a structural condition we have to design for — and most organizations have unlearned how.",
-    href: '#',
   },
 ];
 
@@ -433,15 +433,10 @@ function OverviewPanel({ query }) {
             through line is sense-making — naming what&apos;s happening before
             prescribing what should change.
           </p>
-          <a
-            href="#"
-            className={styles.overviewLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to={SUBSTACK_URL} className={styles.overviewLink}>
             Read essays on Substack
             <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </FadeIn>
       </Section>
 
@@ -885,15 +880,10 @@ function SubstackPanel({ query }) {
             </p>
           </div>
           <div className={styles.substackHeroAction}>
-            <a
-              href="#"
-              className={styles.substackButton}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to={SUBSTACK_URL} className={styles.substackButton}>
               Read on Substack
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
             <span className={styles.substackMeta}>New essays weekly</span>
           </div>
         </FadeIn>
@@ -901,24 +891,19 @@ function SubstackPanel({ query }) {
 
       <Stagger className={styles.essaysGrid}>
         {filtered.map((post) => (
-          <StaggerItem
-            key={post.title}
-            as="a"
-            href={post.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.postCard}
-          >
-            <div className={styles.postMeta}>
-              <span className={styles.postKind}>{post.kind}</span>
-              <span className={styles.postMetaSep}>·</span>
-              <span className={styles.postDate}>{post.date}</span>
-            </div>
-            <h3 className={styles.postTitle}>{post.title}</h3>
-            <p className={styles.postBody}>{post.body}</p>
-            <span className={styles.postLink}>
-              Read essay <span aria-hidden="true">→</span>
-            </span>
+          <StaggerItem key={post.title} className={styles.postCard}>
+            <Link to={SUBSTACK_URL} className={styles.postCardLink}>
+              <div className={styles.postMeta}>
+                <span className={styles.postKind}>{post.kind}</span>
+                <span className={styles.postMetaSep}>·</span>
+                <span className={styles.postDate}>{post.date}</span>
+              </div>
+              <h3 className={styles.postTitle}>{post.title}</h3>
+              <p className={styles.postBody}>{post.body}</p>
+              <span className={styles.postLink}>
+                Read essay <span aria-hidden="true">→</span>
+              </span>
+            </Link>
           </StaggerItem>
         ))}
       </Stagger>
@@ -926,14 +911,9 @@ function SubstackPanel({ query }) {
       {hubMatches && (
         <p className={styles.substackFooter}>
           Subscribe for new essays as they publish.{' '}
-          <a
-            href="#"
-            className={styles.substackFooterLink}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to={SUBSTACK_URL} className={styles.substackFooterLink}>
             Visit the Substack →
-          </a>
+          </Link>
         </p>
       )}
     </Section>
