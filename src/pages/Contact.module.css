@@ -1,0 +1,559 @@
+/* ────────────────────────────────────────────────────────────────────────────
+   Hero — "Let's start with a conversation"
+   ──────────────────────────────────────────────────────────────────────── */
+
+.heroSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(80px, 11vw, 140px) clamp(40px, 5vw, 56px);
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 760px;
+}
+
+.eyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+  margin-bottom: var(--space-1);
+}
+
+.heroTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 4.4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ds-primary);
+  margin: 0 0 var(--space-3);
+  max-width: 16ch;
+}
+
+.heroBody {
+  font-family: var(--ds-font-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+  max-width: 64ch;
+}
+
+.heroLink {
+  color: var(--ds-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.heroLink:hover {
+  color: var(--ds-primary-mauve);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Embedded Client Portal
+   ──────────────────────────────────────────────────────────────────────── */
+
+.portalSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(32px, 4vw, 56px) clamp(40px, 5vw, 64px);
+}
+
+.portalCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: clamp(28px, 4vw, 40px);
+  background-color: var(--ds-surface-container-lowest);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 4px;
+}
+
+.portalHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portalEyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+}
+
+.portalTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 1.9vw, 1.5rem);
+  line-height: 1.22;
+  letter-spacing: -0.005em;
+  color: var(--ds-primary);
+  margin: 0;
+}
+
+.portalBody {
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+  max-width: 64ch;
+}
+
+.portalFrameWrap {
+  width: 100%;
+  margin-top: var(--space-2);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: var(--ds-surface);
+}
+
+.portalFrame {
+  width: 100%;
+  height: 760px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .portalFrame {
+    height: 600px;
+  }
+}
+
+.portalFallback {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+}
+
+.portalFallbackLink {
+  color: var(--ds-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.portalFallbackLink:hover {
+  color: var(--ds-primary-mauve);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Two-card option blocks — Client Portal + First Conversation
+   ──────────────────────────────────────────────────────────────────────── */
+
+.optionsSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(40px, 5vw, 64px);
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 720px) {
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.optionCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: clamp(32px, 4vw, 48px);
+  background-color: var(--ds-surface-container-lowest);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 6px;
+}
+
+.optionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--ds-secondary-container);
+  color: var(--ds-primary);
+  border-radius: 999px;
+  margin-bottom: var(--space-3);
+}
+
+.optionIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.optionEyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-on-surface-variant);
+}
+
+.optionTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(1.375rem, 2vw, 1.625rem);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--ds-primary);
+  margin: 0 0 var(--space-3);
+}
+
+.optionList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.optionList li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ds-on-surface-variant);
+}
+
+.optionList li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--ds-on-surface-variant);
+}
+
+.optionButtonPrimary,
+.optionButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 24px;
+  margin-top: var(--space-3);
+  font-family: var(--ds-font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.optionButtonPrimary {
+  background-color: var(--ds-primary);
+  color: #ffffff;
+  border: 1px solid var(--ds-primary);
+}
+
+.optionButtonPrimary:hover {
+  background-color: var(--ds-primary-container);
+  border-color: var(--ds-primary-container);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.optionButtonOutline {
+  background-color: transparent;
+  color: var(--ds-primary);
+  border: 1px solid var(--ds-primary);
+}
+
+.optionButtonOutline:hover {
+  background-color: var(--ds-primary);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.optionFooter {
+  text-align: center;
+  font-family: var(--ds-font-sans);
+  font-size: 0.8125rem;
+  color: var(--ds-on-surface-variant);
+  margin: var(--space-2) 0 0;
+}
+
+.optionFooterLink {
+  color: var(--ds-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.optionFooterLink:hover {
+  color: var(--ds-primary-mauve);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Action cards — Portal + Calendly (legacy, may still be referenced)
+   ──────────────────────────────────────────────────────────────────────── */
+
+.actionsSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(32px, 4vw, 56px) clamp(56px, 7vw, 80px);
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 720px) {
+  .actionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.actionCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: clamp(28px, 4vw, 40px);
+  background-color: var(--ds-surface-container-lowest);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.actionCard:hover {
+  border-color: var(--ds-outline);
+  transform: translateY(-2px);
+}
+
+.actionEyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+}
+
+.actionTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 1.9vw, 1.5rem);
+  line-height: 1.22;
+  letter-spacing: -0.005em;
+  color: var(--ds-primary);
+  margin: 0;
+}
+
+.actionBody {
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+}
+
+.actionArrow {
+  margin-top: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-primary);
+  transition: gap var(--duration-fast) var(--ease-out);
+}
+
+.actionCard:hover .actionArrow {
+  gap: 12px;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Send a message form
+   ──────────────────────────────────────────────────────────────────────── */
+
+.formSection {
+  background-color: var(--ds-surface-container-low);
+  padding-block: clamp(72px, 10vw, 120px);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .formGrid {
+    grid-template-columns: 1fr 1.6fr;
+    gap: var(--space-8);
+  }
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.formTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ds-primary);
+  margin: 0;
+}
+
+.formLead {
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+  max-width: 38ch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background-color: var(--ds-surface-container-lowest);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 4px;
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formLabel {
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ds-on-surface);
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ds-on-surface);
+  background-color: var(--ds-surface-container-low);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 3px;
+  transition: border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: 0;
+  border-color: var(--ds-primary);
+  box-shadow: 0 0 0 3px rgba(30, 20, 46, 0.06);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 140px;
+  font-family: var(--ds-font-sans);
+}
+
+.formButton {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: var(--space-2);
+  padding: 14px 30px;
+  background-color: var(--ds-primary);
+  color: #ffffff;
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.formButton:hover {
+  background-color: var(--ds-primary-container);
+  transform: translateY(-1px);
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   What to expect
+   ──────────────────────────────────────────────────────────────────────── */
+
+.expectSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(72px, 10vw, 120px);
+}
+
+.expectInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 760px;
+}
+
+.expectTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--ds-primary);
+  margin: 0 0 var(--space-2);
+}
+
+.expectBody {
+  font-family: var(--ds-font-sans);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ds-on-surface-variant);
+  margin: 0;
+  max-width: 64ch;
+}

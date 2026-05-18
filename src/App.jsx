@@ -9,6 +9,7 @@ import Writing from '@pages/Writing';
 import FoundingClients from '@pages/FoundingClients';
 import FAQ from '@pages/FAQ';
 import Contact from '@pages/Contact';
+import WorkWithUs from '@pages/WorkWithUs';
 import NotFound from '@pages/NotFound';
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/founding-clients" element={<FoundingClients />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/work-with-us" element={<WorkWithUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>

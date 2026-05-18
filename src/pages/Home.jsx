@@ -67,7 +67,7 @@ export default function Home() {
               systems thinking, and a human-centered approach to organizational evolution.
             </p>
             <div className={styles.heroActions}>
-              <Button to="/contact" variant="primary" className={styles.heroBtnPrimary}>
+              <Button to="/work-with-us" variant="primary" className={styles.heroBtnPrimary}>
                 Work with us
               </Button>
               <Button to="/services" variant="secondary" className={styles.heroBtnSecondary}>
@@ -173,7 +173,7 @@ export default function Home() {
             Transformation requires honesty and a willingness to look beneath the surface.
             If you are ready to build a culture that lasts, we are ready to partner with you.
           </p>
-          <Button to="/contact" variant="inverse" size="lg">Work with us</Button>
+          <Button to="/work-with-us" variant="inverse" size="lg">Work with us</Button>
         </FadeIn>
       </Section>
     </PageTransition>

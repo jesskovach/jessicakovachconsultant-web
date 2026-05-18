@@ -19,8 +19,10 @@
   --ds-tertiary: #636037;
   --ds-tertiary-sage: #b1ad7d;
 
-  --ds-font-serif: 'Newsreader', 'Cormorant Garamond', Georgia, serif;
-  --ds-font-sans: 'Work Sans', 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  /* Heading font (Manrope) — token name kept for backwards compatibility */
+  --ds-font-serif: 'Manrope', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  /* Body font (Inter) */
+  --ds-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 
   /* Color palette — pulled from KCG mockups */
   --color-bg: #f5f2ee;
@@ -43,8 +45,8 @@
 
   --color-on-accent: #ffffff;
 
-  /* Typography */
-  --font-serif: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  /* Typography (legacy aliases — kept for backwards compatibility) */
+  --font-serif: 'Manrope', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 
   --fs-display: clamp(2.5rem, 5vw, 4rem);

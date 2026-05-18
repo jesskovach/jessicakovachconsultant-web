@@ -15,7 +15,7 @@ export const siteConfig = {
   ],
   cta: {
     label: 'Work with us',
-    to: '/contact',
+    to: '/work-with-us',
   },
   social: {
     connect: [

@@ -1,0 +1,205 @@
+/* ────────────────────────────────────────────────────────────────────────────
+   Hero — Let's get started / Two ways to begin the work
+   ──────────────────────────────────────────────────────────────────────── */
+
+.heroSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(80px, 12vw, 140px) clamp(40px, 5vw, 56px);
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-tertiary);
+}
+
+.heroTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5.2vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  color: var(--ds-primary);
+  margin: var(--space-2) 0 var(--space-2);
+}
+
+.heroBody {
+  font-family: var(--ds-font-sans);
+  font-size: clamp(0.9375rem, 1.25vw, 1.0625rem);
+  line-height: 1.7;
+  color: var(--ds-on-surface-variant);
+  margin: 0 auto;
+  max-width: 58ch;
+}
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Two-card option blocks — Client Portal + First Conversation
+   ──────────────────────────────────────────────────────────────────────── */
+
+.optionsSection {
+  background-color: var(--ds-surface);
+  padding-block: clamp(40px, 5vw, 64px) clamp(80px, 11vw, 140px);
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 720px) {
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.optionCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: clamp(32px, 4vw, 48px);
+  background-color: var(--ds-surface-container-lowest);
+  border: 1px solid var(--ds-outline-variant);
+  border-radius: 6px;
+}
+
+.optionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--ds-secondary-container);
+  color: var(--ds-primary);
+  border-radius: 999px;
+  margin-bottom: var(--space-3);
+}
+
+.optionIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.optionEyebrow {
+  font-family: var(--ds-font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ds-on-surface-variant);
+}
+
+.optionTitle {
+  font-family: var(--ds-font-serif);
+  font-weight: 700;
+  font-size: clamp(1.375rem, 2vw, 1.625rem);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--ds-primary);
+  margin: 0 0 var(--space-3);
+}
+
+.optionList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.optionList li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--ds-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ds-on-surface-variant);
+}
+
+.optionList li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--ds-on-surface-variant);
+}
+
+.optionButtonPrimary,
+.optionButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 24px;
+  margin-top: var(--space-3);
+  font-family: var(--ds-font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.optionButtonPrimary {
+  background-color: var(--ds-primary);
+  color: #ffffff;
+  border: 1px solid var(--ds-primary);
+}
+
+.optionButtonPrimary:hover {
+  background-color: var(--ds-primary-container);
+  border-color: var(--ds-primary-container);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.optionButtonOutline {
+  background-color: transparent;
+  color: var(--ds-primary);
+  border: 1px solid var(--ds-primary);
+}
+
+.optionButtonOutline:hover {
+  background-color: var(--ds-primary);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.optionFooter {
+  text-align: center;
+  font-family: var(--ds-font-sans);
+  font-size: 0.8125rem;
+  color: var(--ds-on-surface-variant);
+  margin: var(--space-2) 0 0;
+}
+
+.optionFooterLink {
+  color: var(--ds-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.optionFooterLink:hover {
+  color: var(--ds-primary-mauve);
+}

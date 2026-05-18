@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { siteConfig } from '@lib/siteConfig';
 import Container from '@components/primitives/Container';
+import logo from '@assets/KCG-logo.png';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -9,8 +10,8 @@ export default function Footer() {
       <Container>
         <div className={styles.grid}>
           <div className={styles.brandCol}>
-            <Link to="/" className={styles.brand}>
-              {siteConfig.brand.name}
+            <Link to="/" className={styles.brand} aria-label={siteConfig.brand.full}>
+              <img src={logo} alt={siteConfig.brand.full} className={styles.brandLogo} />
             </Link>
             <p className={styles.description}>{siteConfig.brand.description}</p>
           </div>

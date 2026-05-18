@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { siteConfig } from '@lib/siteConfig';
 import Button from '@components/primitives/Button';
+import logo from '@assets/KCG-logo.png';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -31,8 +32,13 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className={styles.inner}>
-        <Link to="/" className={styles.brand} onClick={() => setMobileOpen(false)}>
-          {siteConfig.brand.name}
+        <Link
+          to="/"
+          className={styles.brand}
+          onClick={() => setMobileOpen(false)}
+          aria-label={siteConfig.brand.full}
+        >
+          <img src={logo} alt={siteConfig.brand.full} className={styles.brandLogo} />
         </Link>
 
         <nav className={styles.links} aria-label="Primary">
