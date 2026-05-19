@@ -124,6 +124,33 @@
       <h2>Group Coaching Participants</h2>
       <p>If you participate in a group cohort, other cohort members will see your name and hear information you choose to share during group sessions. All cohort members are bound by confidentiality agreements. KCG does not share your contact information with other participants.</p>
 
+      <h2>Portal Users (app.kovachconsultants.com)</h2>
+      <p>If you are a KCG client with a portal account, additional information is collected to deliver coaching services. This section describes what is stored, where it lives, and what you can do with it.</p>
+
+      <h3>What is stored</h3>
+      <ul>
+        <li><strong>Account information:</strong> name, email, phone number, company, and coaching focus.</li>
+        <li><strong>Authentication:</strong> a one-way cryptographic hash of your password (never the password itself). If you enable two-factor authentication, a time-based one-time-password (TOTP) secret. Session tokens are stored temporarily and expire automatically.</li>
+        <li><strong>Coaching content:</strong> goals, milestones, progress notes, session notes, direct messages with your coach, course progress and quiz scores, community thread messages, and anything you create with in-portal tools (values worksheets, mind maps, bullet journals, sketches, working notes).</li>
+        <li><strong>Payment records:</strong> Stripe processes payments on behalf of KCG. The portal stores a record of each transaction (amount, date, status, invoice reference). Card details are not stored in the portal &mdash; Stripe holds those directly.</li>
+      </ul>
+
+      <h3>Where it lives</h3>
+      <p>Portal data is stored on Cloudflare infrastructure (Cloudflare D1 database, Cloudflare KV, Cloudflare Pages, Cloudflare Workers). It is encrypted in transit and at rest. Transactional email is sent via <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Resend</a>. No portal data is sold, shared with third parties, or used for advertising. The portal does not use tracking cookies, behavioral analytics, or advertising networks.</p>
+
+      <h3>Who can see your data</h3>
+      <p>Your coach (Jess Kovach) has access to the coaching content associated with your account &mdash; session notes, goals, progress, messages, and coursework &mdash; to support the coaching relationship. In community threads, other participants can see only what you post in the thread itself; privacy settings in your account control what other community members can see about your profile. No one outside KCG has access to your data unless legally required.</p>
+
+      <h3>Your rights as a portal user</h3>
+      <ul>
+        <li><strong>Export your data.</strong> Goals, journal entries, and worksheets can be exported to PDF from within the portal at any time.</li>
+        <li><strong>Request a full copy</strong> of all data associated with your account by emailing <a href="mailto:privacy@kovachconsultants.com">privacy@kovachconsultants.com</a>.</li>
+        <li><strong>Request deletion</strong> of your account and all associated data via Account Settings or by emailing <a href="mailto:privacy@kovachconsultants.com">privacy@kovachconsultants.com</a>.</li>
+      </ul>
+
+      <h3>Portal data retention</h3>
+      <p>Portal data is retained while your account is active. If your account is closed or your coaching engagement ends, data is kept only as long as needed for legitimate purposes (for example, financial records required by law) or at your request. You can ask for earlier deletion at any time.</p>
+
       <h2>Data Retention</h2>
       <p>We retain your personal information for as long as your engagement is active and for a reasonable period afterward to fulfill legal, accounting, and reporting obligations. Coaching session notes are retained for <strong>two years</strong> after your engagement ends, then permanently deleted. You may request earlier deletion by contacting us.</p>
 
@@ -147,8 +174,6 @@
 
       <h2>Contact</h2>
       <p>For privacy-related questions or to exercise your data rights, email <a href="mailto:support@kovachconsultants.com">support@kovachconsultants.com</a>.</p>
-
-      <p class="legal-disclaimer">This policy is provided as a general guide and does not constitute legal advice. Consult with a qualified attorney to ensure compliance with applicable privacy laws, including state-specific requirements, before relying on this policy.</p>
 
     </div>
 
