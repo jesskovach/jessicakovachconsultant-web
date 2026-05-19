@@ -29,8 +29,10 @@ export const siteConfig = {
       { label: 'Facebook', href: '#' },
     ],
     legal: [
-      { label: 'Privacy Policy', to: '/privacy' },
-      { label: 'Terms of Service', to: '/terms' },
+      { label: 'Privacy Policy', href: '/kcgprivacy' },
+      { label: 'Terms of Service', href: '/kcgterms' },
+      { label: 'Refund Policy', href: '/kcgrefund' },
+      { label: 'Support', href: '/kcgsupport' },
     ],
   },
   contact: {
