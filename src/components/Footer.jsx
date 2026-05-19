@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
-        <div className={styles.grid}>
+        <div className={styles.top}>
           <div className={styles.brandCol}>
             <Link to="/" className={styles.brand} aria-label={siteConfig.brand.full}>
               <img src={logo} alt={siteConfig.brand.full} className={styles.brandLogo} />
@@ -16,9 +16,41 @@ export default function Footer() {
             <p className={styles.description}>{siteConfig.brand.description}</p>
           </div>
 
-          <FooterColumn title="Connect" items={siteConfig.social.connect} />
-          <FooterColumn title="Community" items={siteConfig.social.community} />
-          <FooterColumn title="Legal" items={siteConfig.social.legal} />
+          <div className={styles.linksCol}>
+            <ul className={styles.socialRow} aria-label="Social media links">
+              {siteConfig.social.icons.map(({ label, href, svg }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    className={styles.socialLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${label} — opens in new tab`}
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d={svg} />
+                    </svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <ul className={styles.legalRow} aria-label="Legal links">
+              {siteConfig.social.legal.map(({ label, href, to }) => (
+                <li key={label}>
+                  {to ? (
+                    <Link to={to} className={styles.legalLink}>
+                      {label}
+                    </Link>
+                  ) : (
+                    <a href={href} className={styles.legalLink}>
+                      {label}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className={styles.meta}>
@@ -27,28 +59,5 @@ export default function Footer() {
         </div>
       </Container>
     </footer>
-  );
-}
-
-function FooterColumn({ title, items }) {
-  return (
-    <div className={styles.column}>
-      <h4 className={styles.colTitle}>{title}</h4>
-      <ul className={styles.colList}>
-        {items.map((item) => (
-          <li key={item.label}>
-            {item.to ? (
-              <Link to={item.to} className={styles.colLink}>
-                {item.label}
-              </Link>
-            ) : (
-              <a href={item.href} className={styles.colLink}>
-                {item.label}
-              </a>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
