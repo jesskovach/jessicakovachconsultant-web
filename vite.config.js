@@ -6,6 +6,8 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  base: '/jessicakovachconsultant-web/',
+
   plugins: [react()],
   resolve: {
     alias: {
